@@ -1,6 +1,11 @@
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
 
-public class movement {
-
+public class movement{
+	public movement(){
+	
+		
+	}
 	
 	public void playerMovement() {
 		

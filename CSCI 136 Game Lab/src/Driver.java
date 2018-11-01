@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import javafx.application.Application;
@@ -16,7 +17,7 @@ public class Driver extends Application {
 	}
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) throws FileNotFoundException {
 		
 		//Player image and position
 		Player myPlayer = new Player();
