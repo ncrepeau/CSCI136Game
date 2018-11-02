@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-
 public class item  {
 	private String imagePath;
 	private int position;
@@ -30,13 +27,17 @@ public class item  {
 	}
 
 	public int setXPosition() {
-		int itemX = rand.nextInt(1150)+1;
+		int itemX = rand.nextInt(750)+1;
 		return itemX;
 		
 	}
 	public int setYPosition() {
-		int itemY = rand.nextInt(750)+1;
+		int itemY = rand.nextInt(550)+1;
 		return itemY;
 	}
+	private boolean areRectsColliding(int r1TopLeftX, int r1BottomRightX,int r1TopLeftY, int r1BottomRightY, int r2TopLeftX,int r2BottomRightX, int r2TopLeftY, int r2BottomRightY)  { 
+		 
+		 if (r1TopLeftX < r2BottomRightX && r1BottomRightX > r2TopLeftX&& r1TopLeftY < r2BottomRightY && r1BottomRightY > r2TopLeftY)  
+		{   return true;  }  else  {   return false;  } } 
 
 }

@@ -1,15 +1,21 @@
 import java.util.Random;
 
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.GridPane;
 
 public class movement{
 	Random rand = new Random();
-	public movement(){
-	
-		
+	private Scene myScene;
+	ImageView viewEnemy;
+	ImageView viewPlayer;
+	int x;
+	int y;
+	public movement(ImageView viewEnemy, ImageView viewPlayer){
+	this.myScene = myScene;
+	this.viewEnemy = viewEnemy;
+	this.viewPlayer = viewPlayer;
 	}
 	
 	public void playerMovement() {
@@ -36,6 +42,11 @@ public class movement{
 	viewEnemy.setLayoutX(x-n);
 	viewEnemy.setLayoutY(y-n);
 	}
+	
+	private boolean areRectsColliding(int r1TopLeftX, int r1BottomRightX,int r1TopLeftY, int r1BottomRightY, int r2TopLeftX,int r2BottomRightX, int r2TopLeftY, int r2BottomRightY)  { 
+		 
+		 if (r1TopLeftX < r2BottomRightX && r1BottomRightX > r2TopLeftX&& r1TopLeftY < r2BottomRightY && r1BottomRightY > r2TopLeftY)  
+		{   return true;  }  else  {   return false;  } } 
 	
 	
 
