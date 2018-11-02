@@ -11,6 +11,7 @@ public class item  {
 	private String imagePath;
 	private int position;
 	private double itemWorth;
+	Random rand = new Random();
 
 	public item() {
 	}
@@ -23,21 +24,19 @@ public class item  {
 			String line = myFileScanner.nextLine();
 			itemArray.add(line);
 		}
+		
 		return itemArray;
-	}
-
-	public void setPosition(String imagePath ) {
-		Random rand = new Random();
-		int itemX = rand.nextInt(1150)+1;
-		int itemY = rand.nextInt(750)+1;
-		Image myImage = new Image(imagePath);
-		ImageView myImageView = new ImageView(myImage);
-		myImageView.setX(itemX);
-		myImageView.setY(itemY);
 		
 	}
 
-	public void setItemWorth(double itemWorth) {
-		this.itemWorth = itemWorth;
+	public int setXPosition() {
+		int itemX = rand.nextInt(1150)+1;
+		return itemX;
+		
 	}
+	public int setYPosition() {
+		int itemY = rand.nextInt(750)+1;
+		return itemY;
+	}
+
 }
