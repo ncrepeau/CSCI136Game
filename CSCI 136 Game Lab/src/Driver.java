@@ -123,13 +123,12 @@ public class Driver extends Application {
 		playMove.setMovement(x, y, viewPlayer, viewEnemy);
 		playMove.playerMovement(gameScreen);
 		playMove.enemyMovement(gameScreen);
-		if((viewEnemy.getLayoutX() == viewPlayer.getLayoutY()) && (viewEnemy.getLayoutY() == viewPlayer.getLayoutY()))//for the high scores, what is inside the if statement will probably be replaced by some stuff to do with collision detection.	
-		{
-			Game myGame = new Game();
-			Text highScoreText = new Text(myGame.toString());
-			highScoreText.setLayoutX(1000);
-			highScoreText.setLayoutY(10);
+		
+		//testing to see if collision works
+		if(playMove.isColliding == true) {
+			System.out.println("it is true");
 		}
+		
 		//Start Screen: replace "primaryStage.setScene(gameScreen);" with "primaryStage.setScene(start);" to implement when ready
 		StartScreen begin = new StartScreen();
 		start = begin.Starting(primaryStage, gameScreen);

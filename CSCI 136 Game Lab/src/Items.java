@@ -38,5 +38,5 @@ public class Items  {
 	public double setItemWorth() {
 		return 0.0;
 	}
-
+	
 }
